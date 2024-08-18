@@ -1,72 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sreekar Praneeth Paka - Portfolio</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             color: #333;
             line-height: 1.6;
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
         }
-
+        header {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background: url('SAM07039 -01.jpeg.jpg') no-repeat center center/cover;
+        }
+        header .overlay {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px 0;
+            text-align: center;
+            color: #fff;
+        }
+        header .overlay h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+        nav {
+            position: absolute;
+            top: 20px;
+            width: 100%;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #f4f4f4;
+        }
         .container {
             width: 80%;
             margin: auto;
             overflow: hidden;
+            padding: 20px 0;
         }
-
-        header {
-            position: relative;
-            background: url('SONY8298.jpg') no-repeat center center/cover;
-            height: 400px;
-            text-align: center;
-            color: #1e8a78;
-        }
-
-        header h1 {
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            margin: 0;
-	    font-size: 3em;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-        }
-
-        nav {
-            background: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1.2em;
-        }
-
-        nav ul li a:hover {
-            text-decoration: underline;
-        }
-
         .content-section {
             background: #fff;
             padding: 20px;
@@ -74,50 +72,55 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-
         h2 {
             color: #333;
             border-bottom: 2px solid #f4f4f4;
             padding-bottom: 10px;
         }
-
         ul {
             list-style-type: none;
             padding: 0;
         }
-
         ul li {
             padding: 5px 0;
         }
-
-        .contact-info,
-        .skills,
-        .projects {
+        .photo-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .photo-gallery .gallery {
+            flex-basis: 48%;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .photo-gallery img {
+            width: 100%;
+            height: auto;
+            display: none;
+        }
+        .photo-gallery img.active {
+            display: block;
+        }
+        .contact-info, .skills, .projects {
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
         }
-
-        .contact-info div,
-        .skills div,
-        .projects div {
+        .contact-info div, .skills div, .projects div {
             flex-basis: 48%;
             margin-bottom: 20px;
         }
-
-        .contact-info div h3,
-        .skills div h3,
-        .projects div h3 {
+        .contact-info div h3, .skills div h3, .projects div h3 {
             margin-top: 0;
             color: #555;
         }
-
-        .contact-info div p,
-        .skills div p,
-        .projects div p {
+        .contact-info div p, .skills div p, .projects div p {
             margin: 5px 0;
         }
-
         footer {
             background: #333;
             color: #fff;
@@ -127,25 +130,24 @@
         }
     </style>
 </head>
-
 <body>
-
     <header>
-        <h1>Sreekar Praneeth Paka</h1>
+        <nav>
+            <ul>
+                <li><a href="#summary">Summary</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="overlay">
+            <h1>Sreekar Praneeth Paka</h1>
+            <p>Photographer & Electronics and Communication Engineering Student</p>
+        </div>
     </header>
-
-    <nav>
-        <ul>
-            <li><a href="#summary">Summary</a></li>
-            <li><a href="#expertise">Expertise & Skills</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#achievements">Achievements</a></li>
-            <li><a href="#certifications">Certifications</a></li>
-            <li><a href="#volunteering">Volunteering & Leadership</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
 
     <div class="container">
         <section id="summary" class="content-section">
@@ -153,7 +155,7 @@
             <p>An enthusiastic Electronics and Communication Engineering student with a strong foundation in programming, machine learning, and data analysis. Passionate about innovation and technology with proven success in competitions and projects.</p>
         </section>
 
-        <section id="expertise" class="content-section">
+        <section id="skills" class="content-section">
             <h2>Expertise & Skills</h2>
             <div class="skills">
                 <div>
@@ -194,6 +196,16 @@
 
         <section id="achievements" class="content-section">
             <h2>Achievements</h2>
+		 <section id="gallery" class="content-section">
+            <h2>Photo Gallery</h2>
+            <div class="photo-gallery">
+                <div class="gallery">
+                    <img src="123.jpg" class="active" alt="Image 1">
+                    <img src="456.jpg" alt="Image 2">
+                    <img src="789.jpg" alt="Image 3">
+                    <img src="Screenshot 2024-08-18 123431.jpg" alt="Image 4">
+                    <img src="Screenshot 2024-08-18 123338.jpg" alt="Image 5">
+                </div>
             <ul>
                 <li>First Prize in IEEE WIE Poster Presentation</li>
                 <li>Second Prize in the Idea Pitching Competition - EcoShe Summit by IEEE WIE Hyd</li>
@@ -212,14 +224,6 @@
             </ul>
         </section>
 
-        <section id="volunteering" class="content-section">
-            <h2>Volunteering & Leadership</h2>
-            <ul>
-                <li>CEO of Student Activity Club - RGMCET</li>
-                <li>Chair, IEEE Signal Processing Society</li>
-            </ul>
-        </section>
-
         <section id="projects" class="content-section">
             <h2>Projects</h2>
             <div class="projects">
@@ -234,6 +238,26 @@
                 </div>
                 <div>
                     <h3>Home Security System using Arduino</h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="content-section">
+            <h2>Photo Gallery</h2>
+            <div class="photo-gallery">
+                <div class="gallery">
+                    <img src="Screenshot_2023-05-31-08-47-46-69_1c337646f29875672b5a61192b9010f9.jpg" class="active" alt="Image 1">
+                    <img src="SAM06104 (1).jpg" alt="Image 2">
+                    <img src="IMG_20220316_204819_071.jpg" alt="Image 3">
+                    <img src="IMG_20210816_202847_155.jpg" alt="Image 4">
+                    <img src="IMG_0683.jpg" alt="Image 5">
+                </div>
+                <div class="gallery">
+                    <img src="SAM07648.jpg" class="active" alt="Image 6">
+                    <img src="SAM00661.jpg" alt="Image 7">
+                    <img src="SAM01092.jpg" alt="Image 8">
+                    <img src="SAM01574.jpg" alt="Image 9">
+                    <img src="Remini20211004145442833.jpg" alt="Image 10">
                 </div>
             </div>
         </section>
@@ -264,6 +288,20 @@
     <footer>
         <p>&copy; 2024 Sreekar Praneeth Paka. All rights reserved.</p>
     </footer>
-</body>
 
+    <script>
+        function changeImage(gallery) {
+            const images = gallery.querySelectorAll('img');
+            let current = 0;
+
+            setInterval(() => {
+                images[current].classList.remove('active');
+                current = (current + 1) % images.length;
+                images[current].classList.add('active');
+            }, 2000);
+        }
+
+        document.querySelectorAll('.gallery').forEach(changeImage);
+    </script>
+</body>
 </html>
